@@ -1,5 +1,6 @@
 # Low Light Object Detection using TFOD 2.0
 This repo implements Object detection on Low Light/ Dark images
+![Alt Text](https://github.com/ashwin-py/Low-Light-Object-Detection/blob/main/detections.gif)
 ## Dataset
 For this task Exclusively-Dark-Image-Dataset was used.
 Follow this link to download the dataset:  
