@@ -1,0 +1,9 @@
+.idea
+.ipynb_checkpoints
+detections1
+ssd_efficientdet_d1_640x640_15k_ckpt
+venv
+checkpoint/ckpt-17.data-00000-of-00001
+checkpoint/checkpoint
+data/train.tfrecord
+data/test.tfrecord
