@@ -1,5 +1,5 @@
 # Low Light Object Detection using TFOD 2.0
-This repo implements Object detetction on Low Light/ Dark images
+This repo implements Object detection on Low Light/ Dark images
 ## Dataset
 For this task Exclusively-Dark-Image-Dataset was used.
 Follow this link to download the dataset:  
@@ -9,7 +9,7 @@ https://github.com/cs-chan/Exclusively-Dark-Image-Dataset/tree/master/Groundtrut
 
 Below preprocess steps were performed on the original dataset.
 - Since some images were saved in PNG with RGBA channel, All images are converted to JPG with RGB channels.
-- Annotaions are in the txt format, So all Class info and Bounding box info is transfered to a single csv file.
+- Annotations are in the txt format, So all Class info and Bounding box info is transferred to a single csv file.
 - Dataset is split in Train and test with ratio of 0.75:0.25
 - Dataset is converted to TFRecord format.
 - Label_map with 12 classes 
@@ -27,9 +27,9 @@ Model Config changes in the default pipeline.config
 - batch_size: 32
 - num_steps: 15000
 - bfloat: false(true only for tpu)
-- finetune checkpint path
+- finetune checkpoint path
 - label_map path
-- tfrecord path for both train and test
+- tfrecord path for both train and test  
 [Prepared Data can be downloaded from here.](https://drive.google.com/file/d/1bYcrm5rWjhUpmJqY4zLdkTiVlqKign2m/view?usp=sharing)
 
 ## Training
@@ -49,9 +49,9 @@ Instance details:
           └── ckpt-xx-index  
 ```
 [Trained Checkpint can be downloaded from here](https://drive.google.com/file/d/1rNA6U2sYpP4peDc4DYedHBdlWD4mYYBz/view?usp=sharing)
-## Evalution
+## Evaluation
 
-Evalution done on defalut coco_detection_metrics.  
+Evaluation done on default coco_detection_metrics.  
 
 #### **DetectionBoxes_Precision/mAP: 0.368919**  
 
@@ -70,8 +70,8 @@ Evalution done on defalut coco_detection_metrics.
     --save_path=. \  ## if save_detection=True
     ```
 ## To Do
-Train for more steps with exisitng checkpoint.  
-Train a differnet model architecture.  
+Train for more steps with existing checkpoint.  
+Train a different model architecture.  
 
 ## References
 https://github.com/cs-chan/Exclusively-Dark-Image-Dataset  
