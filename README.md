@@ -1,6 +1,10 @@
 # Low Light Object Detection using TFOD 2.0
-This repo implements Object detection on Low Light/ Dark images
-![Alt Text](https://github.com/ashwin-py/Low-Light-Object-Detection/blob/main/detections.gif)
+This repo implements Object detection on Low Light/ Dark images using TFOD 2.0 framework.  
+Objective is to test how better the object detection models perform on Low light images without pre-processing or enhancement with few shot learning.
+<p align="center">
+   <img src="https://github.com/ashwin-py/Low-Light-Object-Detection/blob/main/detections.gif" width="700" height="448"/>
+</p>  
+
 ## Dataset
 For this task Exclusively-Dark-Image-Dataset was used.
 Follow this link to download the dataset:  
@@ -13,7 +17,9 @@ Below preprocess steps were performed on the original dataset.
 - Annotations are in the txt format, So all Class info and Bounding box info is transferred to a single csv file.
 - Dataset is split in Train and test with ratio of 0.75:0.25
 - Dataset is converted to TFRecord format.
-- Label_map with 12 classes 
+- Label_map with 12 classes. 
+[Prepared Data can be downloaded from here.](https://drive.google.com/file/d/1bYcrm5rWjhUpmJqY4zLdkTiVlqKign2m/view?usp=sharing)
+
 ```bash
 └── data/  
     ├── annotations.csv  
@@ -31,7 +37,6 @@ Model Config changes in the default pipeline.config
 - finetune checkpoint path
 - label_map path
 - tfrecord path for both train and test  
-[Prepared Data can be downloaded from here.](https://drive.google.com/file/d/1bYcrm5rWjhUpmJqY4zLdkTiVlqKign2m/view?usp=sharing)
 
 ## Training
 
@@ -48,28 +53,18 @@ Instance details:
           ├── ssd_efficientdet_d1_640x640_coco17_tpu-8.config  
           ├── ckpt-xx-data-xxxx  
           └── ckpt-xx-index  
-```
-[Trained Checkpint can be downloaded from here](https://drive.google.com/file/d/1rNA6U2sYpP4peDc4DYedHBdlWD4mYYBz/view?usp=sharing)
+```  
+[Trained Checkpint can be downloaded from here](https://drive.google.com/file/d/1rNA6U2sYpP4peDc4DYedHBdlWD4mYYBz/view?usp=sharing)  
 ## Evaluation
-
 Evaluation done on default coco_detection_metrics.  
-
 #### **DetectionBoxes_Precision/mAP: 0.368919**  
 
 ## Usage
 * Download and save the checkpoint.
 * Download some test images or download images uploaded here in test_images folder.
-* Clone the TFOD repo.
-* Run inference.py
-    ```
-    cd models/research
-    
-    python run_inference.py --images_folder_dir=test_images/ \
-    --model_dir=checkpoint/ \
-    --label_map_path=data/label_map.txt \
-    --save_detection=True \
-    --save_path=. \  ## if save_detection=True
-    ```
+* Install dependencies from requirements.txt
+* Use Inference_from_checkpoint notebook.  
+
 ## To Do
 Train for more steps with existing checkpoint.  
 Train a different model architecture.  
