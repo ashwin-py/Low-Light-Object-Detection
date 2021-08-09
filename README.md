@@ -44,7 +44,7 @@ Training performed on AWS EC2 Instance
 Instance details:  
 - Deep Learning AMI (Ubuntu 18.04)  
 - Type: p3.8xlarge (4xTeslaV100 16gb gpu)  
-- Time for 15000 steps: 5:30hrs  
+- Number of steps: 15000 
 ```bash
   └── checkpoint/  
       └── ssd_efficientdet_d1_640x640_coco17_tpu-8/  
